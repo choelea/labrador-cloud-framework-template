@@ -1,28 +1,21 @@
 #! /bin/bash
 
 ####
-#  1,  更改文件夹路径
+#  1,  拷贝文件夹及文件
 #  2， 替换package
 #  3， 替换rootPackage
 #  4， 替换artifactId
-#  5， 替换作者
-#
-#
 #############
 
 ######## Template Variable begin ########
 originPackage=com.tyymt.wxplatform.service.order.hotel
 originRootPackage=com.tyymt.wxplatform
 originArtifactId=service-order-hotel
-originAuthor=肖晟鹏
-originEmail=xiaocpa@digitalchina.com
 ######## Template Variable End ####3
 
 rootPackage=tech.icoding
 package=tech.icoding.service.demo
 artifactId=service-demo
-author='Joe Li'
-email=joe.lea@foxmail.com
 
 originSubFolder=${originPackage//\./\/}
 subFolder=${package//\./\/}
@@ -57,10 +50,3 @@ grep -rl "$originPackage" ./$artifactId/  | xargs sed -i "" "s/$originPackage/$p
 grep -rl "$originRootPackage" ./$artifactId/  | xargs sed -i "" "s/$originRootPackage/$rootPackage/g"
 
 ### 4 替换artifactId
-grep -rl "$originArtifactId" ./$artifactId/  | xargs sed -i "" "s/$originArtifactId/$artifactId/g"
-
-### 4 替换artifactId
-grep -rl "$originAuthor" ./$artifactId/  | xargs sed -i "" "s/$originAuthor/$author/g"
-grep -rl "$originEmail" ./$artifactId/  | xargs sed -i "" "s/$originEmail/$email/g"
-today=$(date +20%y-%m-%d)
-grep -rl "2020-10-16" ./$artifactId/  | xargs sed -i "" "s/2020-10-16/$today/g"
