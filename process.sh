@@ -8,14 +8,13 @@
 #############
 
 ######## Template Variable begin ########
-originPackage=com.tyymt.wxplatform.service.order.hotel
-originRootPackage=com.tyymt.wxplatform
-originArtifactId=service-order-hotel
+originPackage=tech.icoding.service.demo
+originRootPackage=tech.icoding
+originArtifactId=service-demo
 ######## Template Variable End ####3
-
-rootPackage=tech.icoding
-package=tech.icoding.service.demo
-artifactId=service-demo
+read -p 'Root Package: ' rootPackage
+read -p 'Package: ' package
+read -p 'ArtifactId/Service Name: ' artifactId
 
 originSubFolder=${originPackage//\./\/}
 subFolder=${package//\./\/}
@@ -50,3 +49,4 @@ grep -rl "$originPackage" ./$artifactId/  | xargs sed -i "" "s/$originPackage/$p
 grep -rl "$originRootPackage" ./$artifactId/  | xargs sed -i "" "s/$originRootPackage/$rootPackage/g"
 
 ### 4 替换artifactId
+grep -rl "$originArtifactId" ./$artifactId/  | xargs sed -i "" "s/$originArtifactId/$artifactId/g"
