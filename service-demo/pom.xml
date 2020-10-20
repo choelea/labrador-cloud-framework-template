@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.bestjoy</groupId>
+        <artifactId>labrador-cloud-framework</artifactId>
+        <version>1.0.1</version>
+    </parent>
+    <groupId>tech.icoding</groupId>
+    <artifactId>service-demo</artifactId>
+    <version>1.0.0</version>
+    <name>service-demo</name>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>service-demo-sdk</module>
+        <module>service-demo-sdk-cloud</module>
+        <module>service-demo-common</module>
+        <module>service-demo-facade</module>
+        <module>service-demo-api</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.bestjoy</groupId>
+            <artifactId>labrador-cloud-discovery</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.bestjoy</groupId>
+            <artifactId>labrador-cloud-web</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>net.bestjoy</groupId>
+                <artifactId>labrador-cloud-dependencies</artifactId>
+                <version>${project.parent.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>tech.icoding</groupId>
+                <artifactId>service-demo-sdk</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tech.icoding</groupId>
+                <artifactId>service-demo-sdk-cloud</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tech.icoding</groupId>
+                <artifactId>service-demo-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tech.icoding</groupId>
+                <artifactId>service-demo-facade</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>tech.icoding</groupId>
+                <artifactId>service-demo-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

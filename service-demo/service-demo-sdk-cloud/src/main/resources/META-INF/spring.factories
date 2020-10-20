@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  tech.icoding.service.demo.sdk.cloud.config.FeignConfig,\
+  tech.icoding.service.demo.sdk.cloud.config.FeignServiceConfig
