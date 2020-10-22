@@ -13,6 +13,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <labrador-cloud.version>1.0.1</labrador-cloud.version>
     </properties>
 
     <packaging>pom</packaging>
@@ -29,12 +30,12 @@
         <dependency>
             <groupId>net.bestjoy</groupId>
             <artifactId>labrador-cloud-discovery</artifactId>
-            <version>${project.parent.version}</version>
+            <version>${labrador-cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>net.bestjoy</groupId>
             <artifactId>labrador-cloud-web</artifactId>
-            <version>${project.parent.version}</version>
+            <version>${labrador-cloud.version}</version>
         </dependency>
     </dependencies>
 
@@ -43,7 +44,7 @@
             <dependency>
                 <groupId>net.bestjoy</groupId>
                 <artifactId>labrador-cloud-dependencies</artifactId>
-                <version>${project.parent.version}</version>
+                <version>${labrador-cloud.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>

@@ -26,6 +26,6 @@ spring:
 bestjoy:
   discovery:
     #nacos地址
-    server-addr: 10.3.69.66:8848
+    server-addr: 127.0.0.1:8848
     #注册的服务名，一定要和spring.application.name一致
     service-name: ${spring.application.name}
