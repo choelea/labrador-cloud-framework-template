@@ -1,7 +1,7 @@
 package tech.icoding.service.demo.sdk.cloud.config;
 
 import tech.icoding.service.demo.sdk.cloud.client.DemoFeign;
-import tech.icoding.service.demo.sdk.cloud.service.FeignTestService;
+import tech.icoding.service.demo.sdk.cloud.service.FeignDemoService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,11 +20,11 @@ public class FeignServiceConfig {
     @Resource
     private DemoFeign demoFeign;
 
-    @Bean(value = "feignTestService")
-    public FeignTestService feignTestService(){
-        FeignTestService feignTestService = new FeignTestService();
-        feignTestService.setDemoFeign(demoFeign);
-        return feignTestService;
+    @Bean(value = "feignDemoService")
+    public FeignDemoService feignTestService(){
+        FeignDemoService feignDemoService = new FeignDemoService();
+        feignDemoService.setDemoFeign(demoFeign);
+        return feignDemoService;
     }
 
 }

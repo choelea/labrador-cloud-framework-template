@@ -34,6 +34,6 @@ logging:
 bt:
   swagger:
     title: ${spring.application.name}
-    description: 文旅码酒店订单服务
+    description: Demo 示例
     version: ${spring.application.version}
 

@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
         value = "service-demo",
         path = "/service-demo/demo",
         configuration = FeignConfig.class,
-        contextId = "service-demo-test",
+        contextId = "service-demo",
         url = "${service-demo.url.remoteUrl:}"
 )
 public interface DemoFeign {
