@@ -6,11 +6,11 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
     #数据库地址
-    url: jdbc:mysql://10.3.69.41:3306/demo?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://10.3.70.132:30307/demo?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     #数据库账号
     username: root
     #数据库密码
-    password: Abc#123456
+    password: V72MlqMVcP
     #hikari连接池
     hikari:
       #2*cpu
@@ -26,6 +26,7 @@ spring:
 bestjoy:
   discovery:
     #nacos地址
-    server-addr: 127.0.0.1:8848
+    server-addr: 10.3.69.92:8848
+    namespace: ns-beiming
     #注册的服务名，一定要和spring.application.name一致
     service-name: ${spring.application.name}
